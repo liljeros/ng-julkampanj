@@ -16,8 +16,19 @@ form{
 /* Home */
 
 html.home{
-	background: #EDECEA;
+	background: #f5f5f5;
 }
+
+.header-logo{
+	width: 100%;
+	background: #1F1E20;
+	padding: 15px 0 10px 10%;
+	svg{
+		fill:#fff;
+		width:294px;
+	}
+}
+
 
 #home{
 	padding-bottom: 50px;
@@ -30,39 +41,83 @@ html.home{
 
 #home .hero{
 	width: 100%;
-	height: 446px;
+	height: 500px;
 	background: image-url("home/hero.jpg") center center no-repeat;
-	background-size: 1600px 446px;
+	background-size: cover;
 	overflow: hidden;
 	position: relative;
 	letter-spacing: .09em;
 	margin: 0 auto;
 }
 
+#home .hero .by_cassina{
+		display: block;
+		width: 93px;
+		height: 93px;
+		background: image-url("home/by_cassina.png") center center no-repeat;
+		background-size: 93px 93px;
+		position: absolute;
+		bottom: 1em;
+		right: 3em;
+	}
+
+
+#home .hero::after {
+	  content: "";
+	  background: #000;
+	  opacity: 0.1;
+	  top: 0;
+	  left: 0;
+	  bottom: 0;
+	  right: 0;
+	  position: absolute;
+	  z-index: 0;   
+	}
+
+
+#home .hero .hero-text{
+	margin:60px 0 0 10%;
+	width: 420px;	
+	position: relative;
+	z-index: 10;
+}
 #home .hero .large{
 	font-weight: bold;
 	font-size: 40px;
-	color: #074E6F;
+	color: #fff;
 	text-transform: uppercase;
-	margin: 85px 0 0 136px;
+	margin: 85px 0 0 o;
 	position: relative;
 	z-index: 2;
 	letter-spacing: 2px;
+	text-align: left;
+}
+
+#home .hero p{
+	color:#e5e5e5;
 }
 
 #home .hero .small{
 	font-weight: bold;
-	color: #955F5D;
+	color: #fff;
 	font-size: 18px;
-	margin: 10px 0 0 115px;
+	margin: 10px 0 0 o;
 	line-height: 30px;
 	position: relative;
 	z-index: 2;
-	text-transform: uppercase;
-	text-align: center;
+	text-align: left;
 	width: 375px;
 	letter-spacing: 1px;
 }
+
+#home .hero .divider{
+	display: block;
+	width: 50px;
+	height: 1px;
+	background:#fff;
+	margin: 20px 0;
+}
+
 
 #home .form-wrap{
 	height: 80px;
@@ -70,18 +125,22 @@ html.home{
 	margin: 23px auto 0;
 }
 
-#home .form-wrap .key{
+ .key{
 	width: 46px;
 	height: 19px;
 	margin: 0 auto;
 	background: image-url("home/key.png") 0 0 no-repeat;
-	background-size: 46px 19px;
+	background-size: 27px 16px;
 }
+
+ .prizes .key{
+ 	margin-top: 20px;
+ }
 
 #home .form-wrap .byline{
 	font-size: 15px;
 	text-transform: uppercase;
-	color: #074E6F;
+	color: #525252;
 	text-align: center;
 	font-weight: bold;
 	letter-spacing: 2px;
@@ -91,19 +150,25 @@ html.home{
 #home .form-wrap .email{
 	float: left;
 	font-size: 13px;
-	padding: 8px 0 8px 10px;
-	border: 1px solid #074E6F;
+	padding: 19px 0 20px 10px;
+	border: 1px solid #e5e5e5;
 	width: 256px;
 	outline: none;
 	letter-spacing: 1px;
+	border-radius: 0;
+}
+
+#home .form-wrap .smallprint{
+	float: left;
+	color:#999;
 }
 
 #home .form-wrap .submit{
 	width: 143px;
-	background: #074E6F;
+	background: #18191B;
 	float: left;
-	height: 37px;
-	line-height: 37px;
+	height: 58px;
+	line-height: 58px;
 	color: #FFF;
 	font-size: 13px;
 	text-transform: uppercase;
@@ -119,7 +184,7 @@ html.home{
 #home .form-wrap.ended .thanks{
 	text-transform: uppercase;
 	font-weight: 500;
-	color: #074e6f;
+	color: #151515;
 	text-align: center;
 	font-size: 22px;
 	letter-spacing: 1px;
@@ -147,7 +212,7 @@ html.home{
 }
 
 #home .form-wrap.ended .go-to a{
-	color: #074e6f;
+	color: #151515;
 	font-size: 19px;
 	font-weight:bold;
 	text-transform: uppercase;
@@ -175,7 +240,7 @@ html.home{
 #home .form-wrap.ended .thanks{
 	text-transform: uppercase;
 	font-weight: 500;
-	color: #074e6f;
+	color: #151515;
 	text-align: center;
 	font-size: 22px;
 	letter-spacing: 1px;
@@ -203,7 +268,7 @@ html.home{
 }
 
 #home .form-wrap.ended .go-to a{
-	color: #074e6f;
+	color: #151515;
 	font-size: 19px;
 	font-weight:bold;
 	text-transform: uppercase;
@@ -236,11 +301,11 @@ html.home{
 }
 
 #refer{
-	background: #FFF;
+	background: #f5f5f5;
 }
 
 #refer .page-content{
-	width: 1120px;
+	max-width: 1120px;
 	margin: 0 auto;
 	z-index: 0;
 	position: relative;
@@ -248,7 +313,7 @@ html.home{
 
 #refer .header{
 	height: 50px;
-	background: #074E6F;
+	background: #151515;
 	width: 100%;
 	overflow:hidden;
 	z-index: 1;
@@ -272,6 +337,8 @@ html.home{
 	font-size: 14px;
 }
 
+
+
 #refer .header .logo{
 	font-weight: normal;
 	font-size: 0;
@@ -287,18 +354,20 @@ html.home{
 
 #refer .hero{
 	background: #F1F0EE;
-	height: 391px;
+	height: 450px;
 	overflow: hidden;
 }
 
 #refer .mammoth{
 	width: 612px;
-	height: 394px;
+	height: 450px;
 	background: image-url("refer/mammoth.png") 0 0 no-repeat;
-	background-size: 610px 394px;
+	background-size: 697px 450px;
 	overflow: hidden;
-	margin-top: 15px;
-	float: left;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
 }
 
 #refer .mammoth .need{
@@ -315,8 +384,8 @@ html.home{
 }
 
 #refer .share-wrap{
-	float: right;
-	width: 400px;
+	float: left;
+	width: 440px;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: .13em;
@@ -335,7 +404,7 @@ html.home{
 	line-height: 40px;
 	text-transform: uppercase;
 	font-weight: bold;
-	color: #074E6F;
+	color: #151515;
 	margin-top: 18px;
 	letter-spacing: .13em;
 }
@@ -348,18 +417,17 @@ html.home{
 }
 
 #refer .share-wrap .copy-link{
-	border: 1px solid #D1D0C7;
-	background: #FFF;
-	padding: 10px 0;
-	width: 320px;
-	text-transform: none;
-	font-size: 11px;
-	margin: 20px auto 0;
+  border: 1px solid #CDC9D0;
+  background: #FFF;
+  padding: 17px 20px;
+  width: 320px;
+  text-transform: none;
+  font-size: 11px;
+  margin: 20px auto 0;
+  text-transform: uppercase;
 }
 
 #refer .share-wrap .social-links{
-	width: 120px;
-	height: 37px;
 	margin: 25px auto 0;
 	text-align: center;
 }
@@ -370,9 +438,9 @@ html.home{
 
 #refer .share-wrap .social-links .fb{
 	background: image-url("refer/fb.png");
-	background-size: 27px 27px;
-	width: 27px;
-	height: 27px;
+	background-size: cover;
+	width:249px;
+	height: 45px;
 }
 
 #refer .share-wrap .social-links .twit{
@@ -403,7 +471,7 @@ html.home{
 #refer .prizes .callout{
 	text-align: center;
 	font-size: 16px;
-	color: #074E6F;
+	color: #151515;
 	font-weight: bold;
 	margin: 20px 0 0 0;
 	letter-spacing: 2px;
@@ -412,11 +480,11 @@ html.home{
 
 #refer .prizes .progress{
 	height: 4px;
-	width: 100%;
-	background: image-url("refer/progress-bg.png") 0 0 repeat-x;
+	width: 95%;
+	background: #e4e4e4;
 	background-size: 1px 4px;
 	position: absolute;
-	top: 100px;
+	top: 47px;
 	z-index: 0;
 }
 
@@ -424,20 +492,21 @@ html.home{
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 100%;
 }
 
 #refer .prizes .progress .mover .bar{
-	background: image-url("refer/progress-done.png") 0 0 repeat-x;
-	width: 165px;
+	background:black;
+	width: 20%;
 	height: 4px;
 	-webkit-background-size: 1px 4px;
 	background-size: 1px 4px;
 }
 
-#refer .prize-two .progress .mover .bar{ width: 312px; }
-#refer .prize-three .progress .mover .bar{ width: 566px; }
-#refer .prize-four .progress .mover .bar{ width: 820px; }
-#refer .prize-five .progress .mover .bar{ width: 1120px; }
+#refer .prize-two .progress .mover .bar{ width: 40%; }
+#refer .prize-three .progress .mover .bar{ width: 60%; }
+#refer .prize-four .progress .mover .bar{ width: 80%; }
+#refer .prize-five .progress .mover .bar{ width: 100%; }
 
 
 #refer .prizes ul.products{
@@ -451,12 +520,12 @@ html.home{
 #refer .prizes .products li.title{
 	height: 100%;
 	text-transform: uppercase;
-	color: #074E6F;
+	color: #151515;
 	font-weight: 500;
 	font-size: 14px;
 	float: left;
-	margin-right: 68px;
-	width: 165px;
+	margin-right: 0;
+	width: 20%;
 	font-weight: bold;
 }
 
@@ -472,11 +541,11 @@ html.home{
 
 #refer .prizes .products li.product{
 	height: 100%;
-	color: #074E6F;
-	width: 125px;
-	margin-right: 129px;
+	color: #151515;
+	width: 20%;
 	float: left;
 	position: relative;
+	text-align: center;
 }
 
 #refer .prizes .products li.product .circle{
@@ -540,14 +609,14 @@ html.home{
 
 #refer .prizes .products li.product:hover .circle{
 	color: #FFF;
-	background: #074E6F;
-	border-color: #074E6F;
+	background: #151515;
+	border-color: #151515;
 }
 
 #refer .prizes .products li.product .tooltip{
 	height: 254px;
 	width: 190px;
-	border: 4px solid #074E6F;
+	border: 4px solid #151515;
 	position: absolute;
 	top: -285px;
 	left: -32px;
@@ -567,10 +636,10 @@ html.home{
 #refer .prizes p.place{
 	text-align: center;
 	font-size: 16px;
-	color: #074E6F;
+	color: #151515;
 	width: 100%;
 	font-weight: 500;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 #refer .prizes p.place span{
@@ -606,6 +675,10 @@ html.home{
 	text-decoration: none;
 }
 
+.end-text{
+	margin-top: 30px;
+}
+
 
 
 /*
@@ -617,12 +690,17 @@ only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
 	#home .hero{
 		background: image-url("home/hero@2x.jpg") center center no-repeat;
-		background-size: 1600px 446px;
+		background-size: cover;
 	}
 
-	#home .form-wrap .key{
+	#home .hero .by_cassina{
+		background: image-url("home/by_cassina@2x.png") center center no-repeat;
+		background-size: 93px 93px;
+	}
+
+	.key{
 		background: image-url("home/key@2x.png") 0 0 no-repeat;
-		background-size: 46px 19px;
+		background-size: 27px 16px;
 	}
 
 	#refer .header .logo{
@@ -632,12 +710,12 @@ only screen and (min-device-pixel-ratio: 2) {
 
 	#refer .mammoth{
 		background: image-url("refer/mammoth@2x.png") 0 0 no-repeat;
-		background-size: 610px 394px;
+		background-size: 697px 450px;
 	}
 
 	#refer .share-wrap .social-links .fb{
 		background: image-url("refer/fb@2x.png");
-		background-size: 27px 27px;
+		background-size: cover;
 	}
 
 	#refer .share-wrap .social-links .twit{
@@ -645,15 +723,7 @@ only screen and (min-device-pixel-ratio: 2) {
 		background-size: 27px 27px;
 	}
 
-	#refer .prizes .progress{
-		background: image-url("refer/progress-bg@2x.png") 0 0 repeat-x;
-		background-size: 1px 4px;
-	}
 
-	#refer .prizes .progress .mover .bar{
-		background: image-url("refer/progress-done@2x.png") 0 0 repeat-x;
-		background-size: 1px 4px;
-	}
 
 	#refer .prizes .progress .mover .razor{
 		background: image-url("refer/razor@2x.png") 0 0 no-repeat;
@@ -672,7 +742,251 @@ only screen and (min-device-pixel-ratio: 2) {
 }
 
 
+@media (max-width: 900px) {
 
+
+	#refer .hero .mammoth{
+		opacity: .3;
+	}
+	#refer .prizes ul.products{
+		max-width: 300px;
+		margin: 0 auto;
+		margin-top: 1em;
+		height: auto;
+
+	}
+
+	#refer .share-wrap{
+		margin: 0 auto;
+		float: none;
+	}
+
+	#refer .prizes .products li.product .circle{
+		margin: 20px 0 0 1em;
+		height: 50px;
+    width: 50px;
+     line-height: 50px;
+    border-radius: 100%;
+	}
+	#refer .prizes .products li.product p{
+		text-align: center;
+    width: 114px;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+
+	}
+	#refer .prizes .products li.title{
+		width: 100%;
+		margin: 1em 0;
+		padding: 1em 0;
+		border-bottom: 1px solid #e4e4e4;
+		float: none;
+	}
+	#refer .prizes .products li.title .rewards, #refer .prizes .products li.title .friends{
+		margin: 0;
+		font-size: 12px;
+		display: inline-block;
+		float: left;
+	}
+	#refer .prizes .products li.title .rewards{
+		float: right;
+	}
+	#refer .prizes .products li.product .sep{
+		display: none;
+	}
+	#refer .prizes .products li.product{
+		width: 100%;
+		margin: 1em 0;
+		padding: 1em 0;
+		border-bottom: 1px solid #e4e4e4;
+		float: none;
+		height: 140px;
+	}
+
+	
+
+	#refer .prizes .products li.product .tooltip{
+		display: block;
+		position: absolute;
+		top: -0.5em;
+		left: auto;
+		right: 1em;
+		width: 75px;
+		height: auto;
+	}
+
+	#refer .prizes .products li.product .tooltip img{
+		width: 100%;
+		height: auto;
+	}
+
+	.end-text{
+		width: 100%;
+		
+	}
+
+	
+
+	#refer .prizes .progress{
+		width: 10px;
+		height: 786px;
+		left: -40px;
+
+	}
+
+	#refer .prizes .progress .mover{
+		width: 10px;
+		height:100%;
+	}
+	#refer .prizes .progress .mover .bar{
+		width: 10px;
+		height:10px;
+	}
+
+	#refer .prize-two .progress .mover .bar{ width: 10px; height: 173px; }
+	#refer .prize-three .progress .mover .bar{ width: 10px; height: 346px; }
+	#refer .prize-four .progress .mover .bar{ width: 10px; height: 519px; }
+	#refer .prize-five .progress .mover .bar{ width: 10px; height: 100%; }
+
+
+}
+
+@media (max-width: 600px) {
+
+	
+	.header-logo{
+    padding: 15px 0 10px 0;
+    text-align: center;
+    box-sizing: border-box;
+	 	svg{
+			width: 200px;
+		}
+	}
+	#home .hero	{
+		height: 450px;
+	}
+	#home .hero::after {
+		opacity: .5;
+	}
+
+	#home .hero .by_cassina{
+		z-index: 10;
+		left: 50%;
+		margin-left:-25px;
+		width: 50px;
+		height: 50px;
+		background-size:50px 50px;
+		bottom: 2em;
+
+	}
+
+	#home .hero .hero-text{
+		margin:60px 0 0 5%;
+		width: 90%;
+	}
+
+	#home .hero .large{
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	#home .hero .small{
+		width: auto;
+	}
+
+	#home .hero p{
+		line-height: 1.2;
+	}
+
+
+
+	#home .form-wrap {
+		width: 100%;
+	}
+	#home .form-wrap{
+		text-align: center;
+	}
+	#home .form-wrap .email{
+		float: none;
+		width: 90%;
+		margin: 10px auto;
+		box-sizing:border-box;
+		padding: 30px 1em;
+	}
+
+	#home .form-wrap .submit{
+		float: none;
+		width: 90%;
+		margin: 0 auto 10px;
+	}
+	#home .form-wrap .smallprint{
+		float: none;
+		width: 90%;
+	}
+
+
+	#refer .hero{
+		width: auto;
+		background: #000;
+	}
+	#refer .hero .page-content{
+		width: 100%;
+
+	}
+
+	#refer .mammoth{
+		position: absolute;
+		left: -110px;
+		top:0;
+		z-index: -1;
+		opacity: .5;
+		margin-top: 0;
+	  padding: 0 40px;
+	}
+
+	#refer .share-wrap{
+		width: 90%;
+		margin: 0 auto;
+		float: none;
+	}
+	#refer .share-wrap .why{
+		font-size: 12px;
+		color: #e4e4e4;
+	}
+
+	#refer .share-wrap .title{
+		font-size: 20px;
+		line-height: 25px;
+		color: #fff;
+	}
+
+	#refer .share-wrap .subtitle{
+		font-weight: 700;
+		color: #e4e4e4;
+	}
+
+	#refer .share-wrap .copy-link{
+		font-size: 9px;
+		padding: 17px 10px;
+		    width: 280px;
+
+	}
+}
+
+@media (max-width: 380px) {
+	#refer .prizes ul.products{
+		max-width: 240px;
+	}
+	#refer .prizes .progress{
+		left: -20px;
+		top: 60px;
+	}
+	#refer .prizes .products li.title .rewards, #refer .prizes .products li.title .friends{
+		font-size: 9px;
+		width: 75px;
+	}
+}
 
 
 

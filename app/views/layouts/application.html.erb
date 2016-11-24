@@ -5,13 +5,13 @@
 <!--[if IE 9 ]>    <html class="ie9 <%= @bodyId %>"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="<%= @bodyId %>"> <!--<![endif]-->
 <head>
-  <title>Harry&#8217;s &ndash; Tell Friends, Shave for Free</title>
+  <title>Nordiska Galleriets Jultävling - Berätta för dina vänner och få julklappar</title>
   <link rel="icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
   <link rel="shortcut icon" href="<%= asset_path('favicon.ico') %>" type="image/x-icon">
 
-  <meta property="og:title" content="Harry’s is coming!"/>
-  <meta property="og:description" content="Shaving is evolving. Didn’t want to leave you all behind. Check out Harry’s here."/>
-  <meta property="og:image" content="<%= asset_path("refer/truman.png") %>"/>
+  <meta property="og:title" content="Vinn en julklapp värd 36 500 kr"/>
+  <meta property="og:description" content="Övertala dina vänner att tävla om den klassiska Utrecht och få fina julklappar av oss på Nordiska Galleriet."/>
+  <meta property="og:image" content="<%= asset_path("refer/utrecht.png") %>"/>
   <meta property="og:url" content="<%= root_url %>"/>
   <% if @is_mobile %>
     <% if @bodyId == 'home' %>
@@ -24,7 +24,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body id="<%= @bodyId %>">
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=115799558507831";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <%= yield %>
 
 
