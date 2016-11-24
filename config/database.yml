@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   database: prelaunchr_development
-  host: localhost
+  host: ng-julkampanj.herokuapp.com
 test:
   adapter: postgresql
   database: prelaunchr_test
