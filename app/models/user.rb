@@ -16,32 +16,26 @@ class User < ActiveRecord::Base
   REFERRAL_STEPS = [
     {
       'count' => 5,
-      'html' => 'Shave<br>Cream',
+      'html' => '200 kr* presentkort<br> på nordiskagalleriet.se',
       'class' => 'two',
       'image' =>  ActionController::Base.helpers.asset_path(
-        'refer/cream-tooltip@2x.png')
+        'refer/presentkort@2x.png')
     },
     {
       'count' => 10,
-      'html' => 'Truman Handle<br>w/ Blade',
+      'html' => 'Stor serveringsbricka <br> ”The Usual Crowd"<br> <span>Värde 395 kr</span>',
       'class' => 'three',
       'image' => ActionController::Base.helpers.asset_path(
-        'refer/truman@2x.png')
+        'refer/bricka@2x.png')
     },
     {
       'count' => 25,
-      'html' => 'Winston<br>Shave Set',
+      'html' => '2 st 50x50 kuddar <br>Nordiska Galleriet <br><span>Värde 1 800 kr</span>',
       'class' => 'four',
       'image' => ActionController::Base.helpers.asset_path(
-        'refer/winston@2x.png')
+        'refer/kuddar@2x.png')
     },
-    {
-      'count' => 50,
-      'html' => 'One Year<br>Free Blades',
-      'class' => 'five',
-      'image' => ActionController::Base.helpers.asset_path(
-        'refer/blade-explain@2x.png')
-    }
+    
   ]
 
   private
